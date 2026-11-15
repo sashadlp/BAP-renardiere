@@ -1,0 +1,260 @@
+:root {
+  --bg-cream: #F7F4EB;
+  --navy-primary: #04234E;
+  --navy-hover: #0A3775;
+  --text-dark: #1A1A1A;
+  --text-muted: #5C6672;
+  --border-card: #D6D1C4;
+  --white: #FFFFFF;
+}
+
+body,
+.editor-styles-wrapper,
+.wp-site-blocks {
+  background: var(--bg-cream) !important;
+  color: var(--text-dark) !important;
+  font-family: "Roboto", "Segoe UI", system-ui, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6,
+.wp-block-post-title {
+  color: var(--navy-primary) !important;
+  text-shadow: none !important;
+  font-weight: 700;
+}
+
+p, li, span {
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--navy-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--navy-hover) !important;
+  text-decoration: underline;
+  text-shadow: none !important;
+}
+
+.site-header,
+header.wp-block-group {
+  background-color: var(--bg-cream) !important;
+  border-bottom: 1px solid var(--border-card);
+  padding: 0.9rem 2rem !important;
+}
+.site-header .header-inner,
+header.wp-block-group .header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.site-header .header-brand,
+header.wp-block-group .header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-shrink: 0;
+}
+.site-header .header-titles,
+header.wp-block-group .header-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.site-header .header-titles .wp-block-site-title,
+.site-header .header-titles .wp-block-site-title a,
+header.wp-block-group .header-titles .wp-block-site-title,
+header.wp-block-group .header-titles .wp-block-site-title a {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy-primary) !important;
+  margin: 0;
+  line-height: 1.2;
+  text-decoration: none;
+}
+.site-header .header-titles .site-subtitle,
+header.wp-block-group .header-titles .site-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted) !important;
+  margin: 0;
+  line-height: 1.2;
+}
+.site-header .header-nav,
+.site-header .wp-block-navigation,
+header.wp-block-group .header-nav,
+header.wp-block-group .wp-block-navigation {
+  margin-left: auto;
+  width: auto !important;
+}
+.site-header .header-nav .wp-block-navigation__container,
+.site-header .wp-block-navigation .wp-block-navigation__container,
+header.wp-block-group .header-nav .wp-block-navigation__container,
+header.wp-block-group .wp-block-navigation .wp-block-navigation__container {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: nowrap;
+}
+.site-header .header-nav .wp-block-navigation-item__content,
+.site-header .wp-block-navigation .wp-block-navigation-item__content,
+header.wp-block-group .header-nav .wp-block-navigation-item__content,
+header.wp-block-group .wp-block-navigation .wp-block-navigation-item__content {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-dark) !important;
+  white-space: nowrap;
+}
+
+.hero-college,
+.wp-block-cover {
+  position: relative;
+  min-height: 360px;
+}
+.hero-college h1,
+.wp-block-cover h1 {
+  color: var(--white) !important;
+  font-size: 2.2rem;
+  text-align: left;
+}
+
+.btn-rentree,
+.wp-block-button.is-style-primary .wp-block-button__link {
+  background-color: var(--navy-primary) !important;
+  color: var(--white) !important;
+  border: 2px solid var(--navy-primary) !important;
+  border-radius: 6px;
+  padding: 0.65rem 1.25rem;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.btn-contact-hero,
+.wp-block-button.is-style-secondary .wp-block-button__link {
+  background-color: var(--white) !important;
+  color: var(--navy-primary) !important;
+  border: 2px solid var(--navy-primary) !important;
+  border-radius: 6px;
+  padding: 0.65rem 1.25rem;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.qui-nous-sommes {
+  max-width: 780px;
+  margin: 3.5rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+.qui-nous-sommes h2 {
+  color: var(--text-dark) !important;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.wp-block-post-template {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+.wp-block-post-template li {
+  background-color: var(--bg-cream);
+  border: 1px solid var(--border-card);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: left !important;
+  padding-bottom: 1.25rem;
+}
+.wp-block-post-template li img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-bottom: 1px dashed var(--border-card);
+}
+.wp-block-post-template li .wp-block-post-date,
+.wp-block-post-template li .taxonomy-category {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding: 0.75rem 1rem 0.25rem;
+}
+.wp-block-post-template li .wp-block-post-title {
+  font-size: 1rem;
+  padding: 0 1rem;
+  margin: 0.25rem 0 0.75rem;
+}
+.wp-block-post-template li .wp-block-post-title a {
+  text-decoration: underline;
+}
+
+.infos-pratiques-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 2rem;
+  align-items: center;
+  margin: 3rem auto;
+}
+@media (max-width: 768px) {
+  .infos-pratiques-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+footer.wp-block-group,
+.site-footer {
+  background-color: var(--navy-primary) !important;
+  color: var(--white) !important;
+  padding: 3rem 1.5rem 2rem !important;
+  margin-top: 4rem;
+  width: 100%;
+  max-width: none !important;
+}
+footer.wp-block-group .footer-columns,
+.site-footer .footer-columns {
+  max-width: 650px;
+  margin: 0 auto 2rem !important;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+footer.wp-block-group .footer-col h3,
+.site-footer .footer-col h3 {
+  color: var(--white) !important;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+footer.wp-block-group .footer-col ul,
+.site-footer .footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+footer.wp-block-group .footer-col li,
+footer.wp-block-group .footer-col a,
+.site-footer .footer-col li,
+.site-footer .footer-col a {
+  color: var(--white) !important;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+footer.wp-block-group .footer-bottom,
+.site-footer .footer-bottom {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 0.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 1.5rem;
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+/*# sourceMappingURL=style.css.map */
